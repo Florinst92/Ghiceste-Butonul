@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>CGhiceste butonul in JavaScript</title>
+  </head>
+
+  <body>
+
+    <script>
+      // Create a button element
+      const button = document.createElement('button')
+
+      // Set the button text to 'Button1'
+      button.innerText = 'Buton1'
+
+      button.id = 'mainButton'
+
+      // Attach the "click" event to your button
+      button.addEventListener('click', () => {
+        // When there is a "click"
+        // it shows an alert in the browser
+        alert('Butonul 1 e castigator')
+      })
+
+      document.body.appendChild(button)
+
+    </script>
+</body>
+    
+  <script>
+  const button2 = document.createElement('button')
+  // Set the button text to 'Button2'
+  button2.innerText = 'Buton2'
+
+  button2.id = 'mainButton'
+
+   // Attach the "click" event to your button
+      button2.addEventListener('click', () => {
+        // When there is a "click"
+        // it shows an alert in the browser
+        alert('Butonul 2 nu e castigator')
+      })
+      document.body.appendChild(button2)
+    </script>
+
+    <script>
+    const button3 = document.createElement('button')
+    // Set the button text to 'Button2'
+    button3.innerText = 'Buton3'
+
+    button3.id = 'mainButton'
+
+   // Attach the "click" event to your button
+      button3.addEventListener('click', () => {
+        // When there is a "click"
+        // it shows an alert in the browser
+        alert('Butonul 3 nu e castigator')
+      })
+      document.body.appendChild(button3)
+
+    </script>
+
+</div>
+</html>
