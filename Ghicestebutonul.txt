@@ -1,63 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>CGhiceste butonul in JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
-
   <body>
-
-    <script>
-      // Create a button element
-      const button = document.createElement('button')
-
-      // Set the button text to 'Button1'
-      button.innerText = 'Buton1'
-
-      button.id = 'mainButton'
-
-      // Attach the "click" event to your button
-      button.addEventListener('click', () => {
-        // When there is a "click"
-        // it shows an alert in the browser
-        alert('Butonul 1 e castigator')
-      })
-
-      document.body.appendChild(button)
-
-    </script>
-</body>
-    
-  <script>
-  const button2 = document.createElement('button')
-  // Set the button text to 'Button2'
-  button2.innerText = 'Buton2'
-
-  button2.id = 'mainButton'
-
-   // Attach the "click" event to your button
-      button2.addEventListener('click', () => {
-        // When there is a "click"
-        // it shows an alert in the browser
-        alert('Butonul 2 nu e castigator')
-      })
-      document.body.appendChild(button2)
-    </script>
-
-    <script>
-    const button3 = document.createElement('button')
-    // Set the button text to 'Button2'
-    button3.innerText = 'Buton3'
-
-    button3.id = 'mainButton'
-
-   // Attach the "click" event to your button
-      button3.addEventListener('click', () => {
-        // When there is a "click"
-        // it shows an alert in the browser
-        alert('Butonul 3 nu e castigator')
-      })
-      document.body.appendChild(button3)
-
-    </script>
-
+    <main>
+        <h1>Guess the winner button !</h1> 
+    </main>
+  <div class="btn-group"> 
+        <button class="button" id = "button_1"  onclick = "display_the_result(0)">click me!</button>  
+        <button class="button" id = "button_2"  onclick = "display_the_result(1)">click me!</button>  
+        <button class="button" id = "button_3"  onclick = "display_the_result(2)">click me!</button>  
+  <div  id = 'showmessage' ></div>
 </div>
+    <script src="script.js"></script>
+</body>
+
+
+<script>
+  function guess_the_Button(input) {
+    const choosenButton = document.getElementById('showmessage');
+    choosenButton.innerHTML="";
+    const winner = document.createElement('div');
+    winner.textContent = 'You guessed the winner button!';
+    const loser = document.createElement('div');
+    loser.textContent = 'You pressed the looser button!';
+    let random = Math.floor(Math.random() * 3);
+    if (input == random) {
+      chossenButton.appendChild(winner);
+    } else {
+      chossenButton.appendChild(loser)
+    }
+  }
+</script>
+
 </html>
